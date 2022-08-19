@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --vermelho: #e50914;
+    --preto: #141414;
+    --branco: #fff;
+}
+
+/*GENERAL ELEMENTS*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--preto);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--branco);
+}
+
+.container {
+    margin-left: 13px;
+}
+
+header .container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Bebas Neue', cursive;
+}
+
+header nav a{
+    text-decoration: none;
+    color: rgb(197, 197, 197);
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: var(--branco);
+}
+
+/*PARTICULAR ELEMENTS*/
+.movie-preview{
+    background: linear-gradient(90deg,rgba(0,0,0,0.8), rgba(0,0,0,0)), url(https://www.themoviedb.org/t/p/original/lIEBRfoMdDWZDf4jtAGHRgMCo34.jpg);
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.movie-title{
+    font-size: 40px;
+}
+
+.movie-description{
+    padding-top: 0.5%;
+    width: 45%;
+    text-align: justify;
+}
+
+.twobuttons{
+    margin-top: 2%;
+}
+
+.button{
+    background-color: rgba(0,0,0,0.5);
+    color: var(--branco);
+    font-size: 18px;
+    border: none;
+    padding: 15px;
+    margin-right: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.button:hover{
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+.button i{
+    margin-right: 5px;
+}
+
+/*MOVIE CAROUSEL*/
+.movielist {
+	display: grid;
+	grid-template-columns: repeat(5, 20vw);
+	grid-column-gap: 1rem;
+	overflow-x: auto;
+    overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	scroll-padding: 1rem;
+}
+
+.active {
+	scroll-snap-type: unset;
+}
+
+.movielist li {
+	scroll-snap-align: center;
+	display: inline-block;
+	border-radius: 3px;
+	font-size: 0;
+}
+
+.movielist img{
+    height: 30vw;
+    cursor: pointer;
+}
+
+/*FOOTER*/
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+footer .rodape{
+    font-size: 15px;
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}
+
+footer .rodape a{
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}

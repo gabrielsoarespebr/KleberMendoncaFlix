@@ -1,0 +1,20 @@
+@media screen and (max-width: 800px)
+{
+    header .container
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .movie-title{
+        font-size: 35px;
+    }
+
+    .movie-description{
+        font-size: 15px;
+    }
+
+    .button{
+        font-size: 15px;
+    }
+}
